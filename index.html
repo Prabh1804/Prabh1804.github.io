@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>website</title>
+	<style>
+		body{
+			display: grid;
+			background: linear-gradient(to bottom, #f0f0f0, #7deb6a);
+			width: 100vw;
+			height: 100vh;
+			justify-content: center;
+			margin: 0;
+		}
+		.container1{
+			grid-template-rows: auto auto;
+			grid-template-columns: auto;
+		}
+		.heading1{
+			text-align: center;
+			font-family: Arial, sans-serif;
+			color: #333;
+			grid-row: 1/2
+			grid-column: 1/2;
+		}
+		.tree{
+			position: absolute;
+			width: 70vh;
+			height: 70vh;
+			top: 36vh;
+			left: -11vh;
+			z-index: -2;
+		}
+		.canvas{
+			position:absolute;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			z-index:-1;
+		}
+		.para{
+			grid-row: 2/3;
+			grid-column: 1/2;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas class="canvas"></canvas>
+	<!--<a href="https://prabh1804.github.io/Mind_Mapper.github.io/">mind mapper</a>-->
+	<img src="tree1.png" alt="tree here" class="tree">
+	<div class="container1">
+		<h1 class="heading1">Welcome</h1>
+		<p class="para1">Hey, I'm 19Years old frontend Developer and here you can see my work, I use Vanilla Javascript, CSS and Html5 for my project<br> I enjoy to learn new thing and building projects with them, Please checkout my work on github<br> I'm active on github and creates free and open sources projects on them Please check them out on links given below</p>
+	</div>
+	<script>
+		let frame = 0;
+		const canvas = document.querySelector(".canvas");
+    	const ctx = canvas.getContext("2d");
+    	const img = new Image();
+    	img.src = "sprite2.png";
+    	let leaveArray = [];
+    	img.onload = function(){
+    	 	canvas.width = window.innerWidth ;
+       		canvas.height = window.innerHeight ;
+       		class Leave{
+      			constructor(){
+	       			this.size = Math.random()*10 + 15;
+           			this.speedX = -Math.random()*0.25 - 0.4;
+           			this.speedY = Math.random()*0.25 + 0.4;
+ 					if (Math.random() < 0.5) {
+                        this.x = canvas.width;
+                        this.y = Math.random() * canvas.height;
+                    } else {
+                        this.x = Math.random() * canvas.width;
+                        this.y = 0;
+                    	}
+           			}
+				update(){
+						this.x += this.speedX;
+						this.y += this.speedY;
+					}
+				draw(){
+		    			ctx.drawImage(img, frame*200, 0, 200, 100, this.x, this.y, this.size, this.size);
+					}
+           		}
+           		
+           	function adder(){
+           		leaveArray.push(new Leave());
+           		setTimeout(adder, 500);
+           	}
+           	adder();
+
+           	function handle(){
+            	ctx.clearRect(0,0,canvas.width,canvas.height);
+            		
+         		for(let i = 0; i < leaveArray.length; i++){
+           			leaveArray[i].draw();
+           			leaveArray[i].update();
+           		}
+           		requestAnimationFrame(handle);
+           	}
+    		requestAnimationFrame(handle);
+    	};
+	</script>
+</body>
+</html>
