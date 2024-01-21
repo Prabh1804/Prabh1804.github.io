@@ -1,34 +1,55 @@
 		body{
 			display: grid;
-			background: linear-gradient(to bottom, #f0f0f0, #7deb6a);
-			width: 100vw;
-			height: 100vh;
+			background: #171717;
 			justify-content: center;
 			margin: 0;
 		}
-		
+	@media (min-width: 800px){
+		.about{
+			height:100vh;
+			width:70vw;
+			margin-left:15vw;
+			margin-right:15vw;
+		}
+	}
+	@media (max-width: 800px){
+		.about{
+			height:100vh;
+			width:100vw;
+		}
+	}
+		.header{
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 2.5fr 1fr;
+		}
+		.strong{
+			color: #f47723;
+			text-shadow: -2px -2px 0px #555555;
+			font-weight: bold;
+		}
 		.container1{
 			grid-template-rows: auto auto;
 			grid-template-columns: auto;
+			height: min-content;
 		}
-		
+		.heartlogo2{
+			width:24px;
+		}
+		.projects{
+			text-align: center;		
+		}
+		.footer{
+			text-align: center;
+			color: white;
+		}
 		.heading1{
 			text-align: center;
 			font-family: Arial, sans-serif;
-			color: #333;
-			grid-row: 1/2
-			grid-column: 1/2;
+			color: #ffffff;
+			font-size: clamp(2.5rem, 6vw, 5rem);
+			margin-top: 5vh;
 		}
-		
-		.tree{
-			position: absolute;
-			width: 70vh;
-			height: 70vh;
-			top: 36vh;
-			left: -11vh;
-			z-index: -2;
-		}
-		
 		.canvas{
 			position:absolute;
 			width: 100vw;
@@ -36,20 +57,30 @@
 			margin: 0;
 			z-index:-1;
 		}
-		
-		.para{
+		.para1{
 			grid-row: 2/3;
 			grid-column: 1/2;
+			font-family: Arial, sans-serif;
+			color: #b4b4b4;
+			font-size: 2rem;
 		}
-		
-		.container2{
-			display: grid;
-			grid-template-columns: auto auto;
-			grid-template-rows: auto;
-			justify-content: center;
-			margin-top: 8vh;			
-		}
-		
 		.link1{
 			margin-right: 8vh;
+		}
+		.ul{
+			color: #ffffff;
+			padding-left: 0;
+			list-style: none;
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: auto auto auto; 
+			align-content: center;
+		}
+		.li{
+			font-family: Arial, sans-serif;
+			margin-right: 20px;
+			font-size: 1.8rem;
+		}
+		.prabhlogo{
+			width: clamp(7.5rem,20vw,12rem); 
 		}
