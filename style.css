@@ -1,23 +1,27 @@
-		body{
+	body{
 			display: grid;
 			background: #171717;
 			justify-content: center;
 			margin: 0;
 		}
-	@media (min-width: 800px){
-		.about{
+	@media (min-width: 1100px){
+		.about,
+		.projects{
 			height:100vh;
 			width:70vw;
 			margin-left:15vw;
 			margin-right:15vw;
+			}
 		}
-	}
-	@media (max-width: 800px){
-		.about{
+	@media (max-width: 1100px){
+		.about,
+		.projects{
 			height:100vh;
-			width:100vw;
+			width:96vw;
+			margin-left: 2vw;
+			margin-right: 2vw;
+			}
 		}
-	}
 		.header{
 			display: grid;
 			grid-template-rows: auto;
@@ -37,8 +41,23 @@
 			width:24px;
 		}
 		.projects{
-			text-align: center;		
+			text-align: center;
+			display: grid;
+			grid-template-rows: auto auto;		
+			grid-template-columns: auto;		
 		}
+		@media(min-width:1100px){
+			.projectimg1{
+				width:40vw;
+				border-radius:10px;
+				box-shadow: 0 0 1px rgba(255,255,255,1);
+				}
+			}
+		@media(max-width:1100px){
+			.projectimg1{
+				display:none;
+				}
+			}
 		.footer{
 			text-align: center;
 			color: white;
@@ -65,10 +84,12 @@
 			font-size: 2rem;
 		}
 		.link1{
-			margin-right: 8vh;
+			margin-right: 2vw;
+			height: auto;
 		}
 		.ul{
 			color: #ffffff;
+			margin: 0;
 			padding-left: 0;
 			list-style: none;
 			display: grid;
@@ -80,7 +101,56 @@
 			font-family: Arial, sans-serif;
 			margin-right: 20px;
 			font-size: 1.8rem;
+			cursor: pointer;
 		}
 		.prabhlogo{
 			width: clamp(7.5rem,20vw,12rem); 
 		}
+		.desktoplogo{
+			width: 10vw;
+		}
+		.span1{
+			display:grid;
+			grid-template-rows: auto;
+			grid-template-columns: auto auto;
+			justify-content: center; 
+			align-items: center; 
+			color: white;
+			font-family: Arial, sans-serif;
+			font-size: 4rem;
+			font-weight: bold;
+		}
+		.githublogo{
+			width: 3rem;
+		}
+		.project1h2{
+			display: grid;
+			color: white;
+			font-family: Arial, sans-serif;
+			font-weight: bold;
+			font-size: 3rem;
+			margin: 0;
+			align-content: center;
+		}
+		.project1para{
+			color: #b4b4b4;
+			font-family: Arial, sans-sanrif;
+			font-size: 1.5rem;
+			margin-top: 0;
+			text-align: start;
+		}
+		.project1about{
+			display: grid;
+			grid-template-columns: auto;
+			grid-template-rows: 2fr 1fr;
+		}
+		.project1{
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: auto auto; 
+		}
+		.githublink1{
+			text-align: center;
+		}
+
+
