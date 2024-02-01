@@ -1,10 +1,4 @@
-	body{
-			display: grid;
-			background: #171717;
-			justify-content: center;
-			margin: 0;
-		}
-	@media (min-width: 1100px){
+	@media (orientation: landscape){
 		.about,
 		.projects{
 			height:100vh;
@@ -12,80 +6,80 @@
 			margin-left:15vw;
 			margin-right:15vw;
 			}
+		.para1{
+				font-size: 2rem;
+			}
+		.projectimg1{
+			width:40vw;
+			border-radius:10px;
+			box-shadow: 0 0 1px rgba(255,255,255,1);
+			}
+		.heading1{
+			font-size: clamp(2.5rem, 8vw, 5rem);			
+			}
+		.prabhlogo{
+			width: clamp(7.5rem,20vw,12rem); 
+			}
+		.desktoplogo{
+			width: 8vw;
+			}
+		.githublogo{
+			width: 3rem;
+			}
+		.projecth1{
+			font-size: 4rem;			
+			}
+		.project1para{
+			font-size: 1.8rem;
+			}
+		.heartlogo2{
+			width:24px;
+			}
 		}
-	@media (max-width: 1100px){
+	@media (orientation: portrait){
 		.about,
 		.projects{
-			height:100vh;
 			width:96vw;
 			margin-left: 2vw;
 			margin-right: 2vw;
 			}
-		}
-		.header{
-			display: grid;
-			grid-template-rows: auto;
-			grid-template-columns: 2.5fr 1fr;
-		}
-		.strong{
-			color: #f47723;
-			text-shadow: -2px -2px 0px #555555;
-			font-weight: bold;
-		}
-		.container1{
-			grid-template-rows: auto auto;
-			grid-template-columns: auto;
-			height: min-content;
-		}
-		.heartlogo2{
-			width:24px;
-		}
-		.projects{
-			text-align: center;
-			display: grid;
-			grid-template-rows: auto auto;		
-			grid-template-columns: auto;		
-		}
-		@media(min-width:1100px){
-			.projectimg1{
-				width:40vw;
-				border-radius:10px;
-				box-shadow: 0 0 1px rgba(255,255,255,1);
-				}
+		.para1{
+				font-size: 8vw;
 			}
-		@media(max-width:1100px){
-			.projectimg1{
-				display:none;
-				}
+		.link1{
+			display:none;
+			}
+		.heading1{
+			font-size: 14vw;			
+			}
+		.prabhlogo{
+			width: 25vw; 
+			}
+		.desktoplogo{
+			width: 12vw;
+			}
+		.githublogo{
+			width: 12vw;
+			}
+		.projecth1{
+			font-size: 14vw;			
+			}
+		.project1para{
+				font-size: 8vw;
 			}
 		.footer{
-			text-align: center;
-			color: white;
+				font-size: 3vw;
+			}
+		.heartlogo2{
+			width:5vw;
+			}
 		}
-		.heading1{
-			text-align: center;
-			font-family: Arial, sans-serif;
-			color: #ffffff;
-			font-size: clamp(2.5rem, 6vw, 5rem);
-			margin-top: 5vh;
-		}
-		.canvas{
-			position:absolute;
-			width: 100vw;
-			height: 100vh;
+		body{
+			display: grid;
+			background: #171717;
+			justify-content: center;
 			margin: 0;
-			z-index:-1;
-		}
-		.para1{
-			grid-row: 2/3;
-			grid-column: 1/2;
-			font-family: Arial, sans-serif;
-			color: #b4b4b4;
-			font-size: 2rem;
-		}
-		.link1{
-			margin-right: 2vw;
-			height: auto;
+			overflow-x: hidden;
 		}
 		.ul{
 			color: #ffffff;
@@ -103,13 +97,7 @@
 			font-size: 1.8rem;
 			cursor: pointer;
 		}
-		.prabhlogo{
-			width: clamp(7.5rem,20vw,12rem); 
-		}
-		.desktoplogo{
-			width: 10vw;
-		}
-		.span1{
+		.projecth1{
 			display:grid;
 			grid-template-rows: auto;
 			grid-template-columns: auto auto;
@@ -117,11 +105,48 @@
 			align-items: center; 
 			color: white;
 			font-family: Arial, sans-serif;
-			font-size: 4rem;
 			font-weight: bold;
 		}
-		.githublogo{
-			width: 3rem;
+		.navbar{
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 2.5fr 1fr;
+		}
+		.strong{
+			color: #f47723;
+			text-shadow: -2px -2px 0px #555555;
+			font-weight: bold;
+		}
+		.introduction{
+			grid-template-rows: auto auto;
+			grid-template-columns: auto;
+			height: min-content;
+		}
+		.link1{
+			margin-right: 2vw;
+			height: auto;
+		}
+		.projects{
+			text-align: center;
+			display: grid;
+			grid-template-rows: auto auto;		
+			grid-template-columns: auto;		
+		}
+		.footer{
+			text-align: center;
+			color: white;
+		}
+		.heading1{
+			text-align: center;
+			font-family: Arial, sans-serif;
+			color: #ffffff;
+			margin-top: 5vh;
+		}
+		.para1{
+			grid-row: 2/3;
+			grid-column: 1/2;
+			font-family: Arial, sans-serif;
+			color: #b4b4b4;
 		}
 		.project1h2{
 			display: grid;
@@ -135,7 +160,6 @@
 		.project1para{
 			color: #b4b4b4;
 			font-family: Arial, sans-sanrif;
-			font-size: 1.5rem;
 			margin-top: 0;
 			text-align: start;
 		}
@@ -147,7 +171,8 @@
 		.project1{
 			display: grid;
 			grid-template-rows: auto;
-			grid-template-columns: auto auto; 
+			grid-template-columns: auto auto;
+			justify-content: center;
 		}
 		.githublink1{
 			text-align: center;
