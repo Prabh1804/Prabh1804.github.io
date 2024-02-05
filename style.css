@@ -1,7 +1,7 @@
 	@media (orientation: landscape){
 		.about,
 		.projects{
-			height:100vh;
+			height:clamp(100vh, auto, 200vh);
 			width:70vw;
 			margin-left:15vw;
 			margin-right:15vw;
@@ -9,7 +9,8 @@
 		.para1{
 				font-size: 2rem;
 			}
-		.projectimg1{
+		.projectimg1,
+		.projectimg2{
 			width:40vw;
 			border-radius:10px;
 			box-shadow: 0 0 1px rgba(255,255,255,1);
@@ -29,7 +30,8 @@
 		.projecth1{
 			font-size: 4rem;			
 			}
-		.project1para{
+		.project1para,
+		.project2para{
 			font-size: 1.8rem;
 			}
 		.heartlogo2{
@@ -46,7 +48,8 @@
 		.para1{
 				font-size: 8vw;
 			}
-		.link1{
+		.link1,
+		.link2{
 			display:none;
 			}
 		.heading1{
@@ -64,7 +67,8 @@
 		.projecth1{
 			font-size: 14vw;			
 			}
-		.project1para{
+		.project1para,
+		.project2para{
 				font-size: 8vw;
 			}
 		.footer{
@@ -122,7 +126,8 @@
 			grid-template-columns: auto;
 			height: min-content;
 		}
-		.link1{
+		.link1,
+		.link2{
 			margin-right: 2vw;
 			height: auto;
 		}
@@ -148,7 +153,8 @@
 			font-family: Arial, sans-serif;
 			color: #b4b4b4;
 		}
-		.project1h2{
+		.project1h2,
+		.project2h2{
 			display: grid;
 			color: white;
 			font-family: Arial, sans-serif;
@@ -157,24 +163,29 @@
 			margin: 0;
 			align-content: center;
 		}
-		.project1para{
+		.project1para,
+		.project2para{
 			color: #b4b4b4;
 			font-family: Arial, sans-sanrif;
 			margin-top: 0;
 			text-align: start;
+			margin-bottom: 50px;
 		}
-		.project1about{
+		.project1about,
+		.project2about{
 			display: grid;
 			grid-template-columns: auto;
 			grid-template-rows: 2fr 1fr;
 		}
-		.project1{
+		.project1,
+		.project2{
 			display: grid;
 			grid-template-rows: auto;
 			grid-template-columns: auto auto;
 			justify-content: center;
 		}
-		.githublink1{
+		.githublink1,
+		.githublink2{
 			text-align: center;
 		}
 
