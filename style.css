@@ -37,6 +37,12 @@
 		.heartlogo2{
 			width:24px;
 			}
+			.ul{
+				display: grid;
+			}
+			.menubutton{
+				display: none;
+			}
 		}
 	@media (orientation: portrait){
 		.about,
@@ -77,6 +83,12 @@
 		.heartlogo2{
 			width:5vw;
 			}
+			.ul{
+				display: none;
+			}
+			.menubutton{
+				display: grid;
+			}
 		}
 		body{
 			display: grid;
@@ -90,7 +102,6 @@
 			margin: 0;
 			padding-left: 0;
 			list-style: none;
-			display: grid;
 			grid-template-rows: auto;
 			grid-template-columns: auto auto auto; 
 			align-content: center;
@@ -113,6 +124,7 @@
 		}
 		.navbar{
 			display: grid;
+			align-items: center;
 			grid-template-rows: auto;
 			grid-template-columns: 2.5fr 1fr;
 		}
@@ -187,6 +199,13 @@
 		.githublink1,
 		.githublink2{
 			text-align: center;
+		}
+		.menudiv{
+			display: none;
+		}
+		.navlink{
+			color: white;
+			text-decoration: none;
 		}
 
 

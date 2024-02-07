@@ -8,14 +8,15 @@
 <body>
 	<!-- <canvas class="canvas"></canvas> -->
 	<!-- <img src="tree1.png" alt="tree here" class="tree"> -->
-	<div class="about"> 
+	<div class="about" id="about">
 		<div class="navbar">
 			<div class="logo"><img src="prabhlogo1.png" class="prabhlogo"/></div>
 				<ul class="ul">
-					<li onclick="go_to_about()" class="li">About</li>
-					<li onclick="go_to_project()" class="li">Project</li>
-					<li onclick="go_to_contact()" class="li" on>Contact</li>
+					<a href="#about" class="navlink"><li  class="li">About</li></a>
+					<a href="#projects" class="navlink"><li class="li">Project</li></a>
+					<a href="#contact" class="navlink"><li  class="li" on>Contact</li></a>
 				</ul>
+				<img src="menubutton.svg" style="width: 12vw" class="menubutton" />
 		</div>
 		<div class="introduction">
 			<h1 class="heading1">Hi, I'm Prabh, a <strong class="strong">front-end</strong> developer</h1>
@@ -28,7 +29,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="projects">
+	<div class="projects" id="projects">
 		<span class="projecth1"><img src="desktoplogo.png" class="desktoplogo"/>Projects</span>
 		<div class="project1">
 			<a href="https://Prabh1804.github.io/Mind_Mapper.github.io" class="link1">
@@ -48,7 +49,7 @@
 			hoping it to help peoples.
 		</p> 
 		<div class="project2" id = "#project2">
-			<a href="#project2" class="link2">
+			<a href="https://Prabh1804.github.io/dragonGame" class="link2">
 				<img src="projectimg2.png" class="projectimg2"/>
 			</a>
 			<div class="project2about">
@@ -66,10 +67,16 @@
 		</p>
 
 	</div>
-	<div class="contact">
-		
+	<div class="contact" id="contact">
 	</div>
 	<footer class="footer"><span>Designed & Build with</span><img class="heartlogo2" src="heartlogo2.png"/><span>by Prabhdeep Singh</span></footer>
 	<script src="script.js"></script> 
+	<div class="menudiv">
+		<ul>
+			<li>About</li>
+			<li>Projects</li>
+			<li>Contact</li>
+		</ul>
+	</div>
 </body>
 </html>
