@@ -1,3 +1,6 @@
+	/*:root{
+		--hue-value: 180deg;
+	}*/
 	@media (orientation: landscape){
 		.about,
 		.projects{
@@ -20,10 +23,20 @@
 			}
 		.prabhlogo{
 			width: clamp(7.5rem,20vw,12rem); 
-			}
+
+			/* here change for toogle button ->*/
+			filter: /*invert(0%)*/ hue-rotate(var(--hue-value, 0deg));
+
+
+		}
 		.desktoplogo{
 			width: 8vw;
-			}
+
+			/*change for toogle*/
+			filter: hue-rotate(var(--hue-value, 0deg));
+
+
+		}
 		.githublogo{
 			width: 3rem;
 			}
@@ -33,7 +46,12 @@
 		.project1para,
 		.project2para{
 			font-size: 1.8rem;
-			}
+
+			/*change for toogle*/
+			filter: hue-rotate(var(--hue-value, 0deg));
+
+
+		}
 		.heartlogo2{
 			width:24px;
 			}
@@ -42,6 +60,12 @@
 			}
 			.menubutton{
 				display: none;
+			}
+			.sun-button,
+			.moon-button{
+				width: 3vw;
+				top: 1vh;
+				right: -14vw;
 			}
 		}
 	@media (orientation: portrait){
@@ -63,10 +87,16 @@
 			}
 		.prabhlogo{
 			width: 25vw; 
+			filter: /*invert(0%)*/ hue-rotate(var(--hue-value, 0deg));
 			}
 		.desktoplogo{
 			width: 12vw;
-			}
+
+			/*change for toogle*/
+			filter: hue-rotate(var(--hue-value, 0deg));
+
+
+		}
 		.githublogo{
 			width: 12vw;
 			}
@@ -88,6 +118,12 @@
 			}
 			.menubutton{
 				display: grid;
+			}
+			.sun-button,
+			.moon-button{
+				width: 8vw;
+				top: 1vh;
+				right: 1vw;
 			}
 		}
 		body{
@@ -121,6 +157,11 @@
 			color: white;
 			font-family: Arial, sans-serif;
 			font-weight: bold;
+
+			/*here change for toogle -->*/
+			filter: hue-rotate(var(--hue-value, 0deg));
+
+
 		}
 		.navbar{
 			display: grid;
@@ -152,6 +193,11 @@
 		.footer{
 			text-align: center;
 			color: white;
+
+			/*change for toogle -->*/
+			filter: hue-rotate(var(--hue-value, 0deg));
+
+
 		}
 		.heading1{
 			text-align: center;
@@ -206,6 +252,26 @@
 		.navlink{
 			color: white;
 			text-decoration: none;
+		}
+
+
+		/*  here change -->*/
+		*{
+			filter: invert(var(--hue-value1, 0%)) hue-rotate(var(--hue-value, 180deg));
+		}
+		.sun-button{
+			position: absolute;
+			background-color: hsl(136, 0%, 20%);
+			border-radius: 50%;
+			box-shadow: 4px 3px grey;
+			display: inline;
+		}
+		.moon-button{
+			position: absolute;
+			background-color: hsl(136, 0%, 20%);
+			border-radius: 50%;
+			box-shadow: 4px 3px grey;
+			display: inline;
 		}
 
 
