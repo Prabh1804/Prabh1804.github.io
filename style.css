@@ -248,6 +248,23 @@
 		}
 		.menudiv{
 			display: none;
+			position: absolute;
+			height: 100vh;
+			width: 40vw;
+			background-color: rgba(120,60,0,0.70);
+			backdrop-filter: blur(10px);
+			right: 0;
+			padding: 30px;
+			text-decoration: none;
+			list-style-type: none;
+			color: white;
+			opacity: 0.9;
+		}
+		.menudiv li{
+			padding: 40px 0;
+			font-size: 60px;
+			color:hsl(180, 100%, 70%);
+			list-style-type: none;
 		}
 		.navlink{
 			color: white;

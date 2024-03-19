@@ -11,6 +11,14 @@ moonFunc = () => {
 	document.querySelector(".sun-button").style.display = "block" ;
 };
 
+menu = () => {
+	document.querySelector(".menudiv").style.display = "grid";
+}
+
+menuRemove = () => {
+	document.querySelector(".menudiv").style.display = "none";
+}
+
 function go_to_about(){
 	console.log("about is clicked");
 }
