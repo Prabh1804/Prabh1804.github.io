@@ -11,7 +11,7 @@
 			width:40vw; border-radius:10px; box-shadow: 0 0 1px rgba(255,255,255,1);
 			}
 		.heading1{
-			font-size: clamp(2.5rem, 8vw, 5rem);			
+			font-size: clamp(2.5rem, 8vw, 5rem);
 			}
 		.prabhlogo{
 			position: relative; width: clamp(7.5rem,20vw,12rem); height: 15vh; padding-right: 45vw;
@@ -24,7 +24,7 @@
 			width: 3rem;
 			}
 		.projecth1{
-			font-size: 4rem;			
+			font-size: 4rem;
 			}
 		.project1para,
 		.project2para{
@@ -193,9 +193,9 @@
 			text-align: center;
 		}
 		.menudiv{
-			display: none; position: absolute; height: 100vh; background-color: rgba(120,60,0,0.70);
+			display: none; position: sticky; height: 100vh; background-color: rgba(120,60,0,0.70);
 			backdrop-filter: blur(10px); right: 0; padding: 30px; text-decoration: none; list-style-type: none;
-			color: white; opacity: 0.9; z-index: 2;
+			color: white; opacity: 0.9; z-index: 2; bottom: 0;
 		}
 		.menudiv li{
 			padding: 40px 0; font-size: 60px; color:hsl(180, 100%, 70%); list-style-type: none;
