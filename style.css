@@ -1,41 +1,24 @@
-	/*:root{
-		--hue-value: 180deg;
-	}*/
 	@media (orientation: landscape){
 		.about,
 		.projects{
-			height:clamp(100vh, auto, 200vh);
-			width:70vw;
-			margin-left:15vw;
-			margin-right:15vw;
+			height:clamp(100vh, auto, 200vh); width:70vw; margin-left:15vw; margin-right:15vw;
 			}
 		.para1{
 				font-size: 2rem;
 			}
 		.projectimg1,
 		.projectimg2{
-			width:40vw;
-			border-radius:10px;
-			box-shadow: 0 0 1px rgba(255,255,255,1);
+			width:40vw; border-radius:10px; box-shadow: 0 0 1px rgba(255,255,255,1);
 			}
 		.heading1{
 			font-size: clamp(2.5rem, 8vw, 5rem);			
 			}
 		.prabhlogo{
-			width: clamp(7.5rem,20vw,12rem); 
-
-			/* here change for toogle button ->*/
-			filter: /*invert(0%)*/ hue-rotate(var(--hue-value, 0deg));
-
-
+			position: relative; width: clamp(7.5rem,20vw,12rem); height: 15vh; padding-right: 45vw;
+			filter: hue-rotate(var(--hue-value, 0deg)); height: 15vh;
 		}
 		.desktoplogo{
-			width: 8vw;
-
-			/*change for toogle*/
-			filter: hue-rotate(var(--hue-value, 0deg));
-
-
+			width: 8vw; filter: hue-rotate(var(--hue-value, 0deg));
 		}
 		.githublogo{
 			width: 3rem;
@@ -45,35 +28,47 @@
 			}
 		.project1para,
 		.project2para{
-			font-size: 1.8rem;
-
-			/*change for toogle*/
-			filter: hue-rotate(var(--hue-value, 0deg));
-
-
-		}
+			font-size: 1.8rem; filter: hue-rotate(var(--hue-value, 0deg));
+			}
 		.heartlogo2{
 			width:24px;
 			}
 			.ul{
-				display: grid;
+				display: grid; padding-right: 5vw; grid-gap: 20px;
 			}
 			.menubutton{
 				display: none;
 			}
 			.sun-button,
 			.moon-button{
-				width: 3vw;
-				top: 1vh;
-				right: -14vw;
+				width: 3vw; top: 2vh; right: 0;
+			}
+			.navbar{
+				grid-template-columns: auto auto auto;
+			}
+			.contact{
+				text-align: center; display: grid; margin: 5vw 15vw; margin-top: 0; grid-template-rows: auto;
+				grid-template-columns: auto auto auto; color: white; justify-content: center;
+			}
+			.linkedindiv{
+				width: 35vw;
+			}
+			.ordiv{    / * none existing*/
+				width: 10vw; font-size: 30px;
+			}
+			.githubdiv{
+				width: 35vw;
+			}
+			.menudiv{
+				width: 40vw;
 			}
 		}
+
+
 	@media (orientation: portrait){
 		.about,
 		.projects{
-			width:96vw;
-			margin-left: 2vw;
-			margin-right: 2vw;
+			width:96vw; margin-left: 2vw; margin-right: 2vw;
 			}
 		.para1{
 				font-size: 8vw;
@@ -83,20 +78,15 @@
 			display:none;
 			}
 		.heading1{
-			font-size: 14vw;			
+			font-size: 14vw;
 			}
 		.prabhlogo{
-			width: 25vw; 
-			filter: /*invert(0%)*/ hue-rotate(var(--hue-value, 0deg));
+			width: 25vw; filter: hue-rotate(var(--hue-value, 0deg)); padding-right: 40vw; height: auto;
+			align-items: center; justify-content: center; align-content: center;
 			}
 		.desktoplogo{
-			width: 12vw;
-
-			/*change for toogle*/
-			filter: hue-rotate(var(--hue-value, 0deg));
-
-
-		}
+			width: 12vw; filter: hue-rotate(var(--hue-value, 0deg));
+			}
 		.githublogo{
 			width: 12vw;
 			}
@@ -121,174 +111,108 @@
 			}
 			.sun-button,
 			.moon-button{
-				width: 8vw;
-				top: 1vh;
-				right: 1vw;
+				width: 8vw; top: 1vh; right: 1vw;
+			}
+			.navbar{
+				grid-template-columns: auto auto auto;
+			}
+			.menudiv{
+				width: 100vw;
 			}
 		}
+
+
+
 		body{
-			display: grid;
-			background: #171717;
-			justify-content: center;
-			margin: 0;
-			overflow-x: hidden;
+			display: grid; background: #171717; justify-content: center; margin: 0; overflow-x: hidden;
 		}
 		.ul{
-			color: #ffffff;
-			margin: 0;
-			padding-left: 0;
-			list-style: none;
-			grid-template-rows: auto;
-			grid-template-columns: auto auto auto; 
-			align-content: center;
+			color: #ffffff; margin: 0; padding-left: 0; list-style: none; grid-template-rows: auto;
+			grid-template-columns: auto auto auto; align-content: center;
 		}
 		.li{
-			font-family: Arial, sans-serif;
-			margin-right: 20px;
-			font-size: 1.8rem;
-			cursor: pointer;
+			text-align: center; font-family: monospace; font-size: 1.8rem; cursor: pointer; border: 2px solid white;
+			border-radius: 12px; padding: 5px;
 		}
 		.projecth1{
-			display:grid;
-			grid-template-rows: auto;
-			grid-template-columns: auto auto;
-			justify-content: center; 
-			align-items: center; 
-			color: white;
-			font-family: Arial, sans-serif;
-			font-weight: bold;
+			display:grid; grid-template-rows: auto;grid-template-columns: auto auto; justify-content: center;
+			align-items: center; color: white; font-family: Arial, sans-serif; font-weight: bold;
 
 			/*here change for toogle -->*/
 			filter: hue-rotate(var(--hue-value, 0deg));
 
-
 		}
 		.navbar{
-			display: grid;
-			align-items: center;
-			grid-template-rows: auto;
-			grid-template-columns: 2.5fr 1fr;
+			display: grid; grid-template-rows: auto; background: #333; position: sticky; top: 0; z-index: 1;
 		}
 		.strong{
-			color: #f47723;
-			text-shadow: -2px -2px 0px #555555;
-			font-weight: bold;
+			color: #f47723; text-shadow: -2px -2px 0px #555555; font-weight: bold;
 		}
 		.introduction{
-			grid-template-rows: auto auto;
-			grid-template-columns: auto;
-			height: min-content;
+			grid-template-rows: auto auto; grid-template-columns: auto; height: min-content;
 		}
 		.link1,
 		.link2{
-			margin-right: 2vw;
-			height: auto;
+			margin-right: 2vw; height: auto;
 		}
 		.projects{
-			text-align: center;
-			display: grid;
-			grid-template-rows: auto auto;		
-			grid-template-columns: auto;		
+			text-align: center; display: grid; grid-template-rows: auto auto; grid-template-columns: auto;
 		}
 		.footer{
-			text-align: center;
-			color: white;
+			text-align: center; color: white;
 
 			/*change for toogle -->*/
 			filter: hue-rotate(var(--hue-value, 0deg));
 
-
 		}
 		.heading1{
-			text-align: center;
-			font-family: Arial, sans-serif;
-			color: #ffffff;
-			margin-top: 5vh;
+			text-align: center; font-family: Arial, sans-serif; color: #ffffff; margin-top: 5vh;
 		}
 		.para1{
-			grid-row: 2/3;
-			grid-column: 1/2;
-			font-family: Arial, sans-serif;
-			color: #b4b4b4;
+			grid-row: 2/3; grid-column: 1/2; font-family: Arial, sans-serif; color: #b4b4b4;
 		}
 		.project1h2,
 		.project2h2{
-			display: grid;
-			color: white;
-			font-family: Arial, sans-serif;
-			font-weight: bold;
-			font-size: 3rem;
-			margin: 0;
+			display: grid; color: white; font-family: Arial, sans-serif; font-weight: bold; font-size: 3rem; margin: 0;
 			align-content: center;
 		}
 		.project1para,
 		.project2para{
-			color: #b4b4b4;
-			font-family: Arial, sans-sanrif;
-			margin-top: 0;
-			text-align: start;
-			margin-bottom: 50px;
+			color: #b4b4b4; font-family: Arial, sans-sanrif; margin-top: 0; text-align: start; margin-bottom: 50px;
 		}
 		.project1about,
 		.project2about{
-			display: grid;
-			grid-template-columns: auto;
-			grid-template-rows: 2fr 1fr;
+			display: grid; grid-template-columns: auto; grid-template-rows: 2fr 1fr;
 		}
 		.project1,
 		.project2{
-			display: grid;
-			grid-template-rows: auto;
-			grid-template-columns: auto auto;
-			justify-content: center;
+			display: grid; grid-template-rows: auto; grid-template-columns: auto auto; justify-content: center;
 		}
 		.githublink1,
 		.githublink2{
 			text-align: center;
 		}
 		.menudiv{
-			display: none;
-			position: absolute;
-			height: 100vh;
-			width: 40vw;
-			background-color: rgba(120,60,0,0.70);
-			backdrop-filter: blur(10px);
-			right: 0;
-			padding: 30px;
-			text-decoration: none;
-			list-style-type: none;
-			color: white;
-			opacity: 0.9;
+			display: none; position: absolute; height: 100vh; background-color: rgba(120,60,0,0.70);
+			backdrop-filter: blur(10px); right: 0; padding: 30px; text-decoration: none; list-style-type: none;
+			color: white; opacity: 0.9; z-index: 2;
 		}
 		.menudiv li{
-			padding: 40px 0;
-			font-size: 60px;
-			color:hsl(180, 100%, 70%);
-			list-style-type: none;
+			padding: 40px 0; font-size: 60px; color:hsl(180, 100%, 70%); list-style-type: none;
 		}
 		.navlink{
 			color: white;
 			text-decoration: none;
 		}
-
-
-		/*  here change -->*/
 		*{
 			filter: invert(var(--hue-value1, 0%)) hue-rotate(var(--hue-value, 180deg));
 		}
-		.sun-button{
-			position: absolute;
-			background-color: hsl(136, 0%, 20%);
-			border-radius: 50%;
-			box-shadow: 4px 3px grey;
-			display: inline;
+		.navbar .sun-button{
+			position: relative; background-color: hsl(136, 0%, 20%); border-radius: 50%; display: none;
+			filter: invert(0%);
 		}
 		.moon-button{
-			position: absolute;
-			background-color: hsl(136, 0%, 20%);
-			border-radius: 50%;
-			box-shadow: 4px 3px grey;
-			display: inline;
+			position: relative; background-color: hsl(136, 0%, 20%); border-radius: 50%; display: inline;
 		}
 
 
