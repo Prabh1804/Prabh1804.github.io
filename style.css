@@ -5,6 +5,7 @@
 			}
 		.para1{
 				font-size: 2rem;
+				margin-bottom: 6vw;
 			}
 		.projectimg1,
 		.projectimg2{
@@ -24,11 +25,11 @@
 			width: 3rem;
 			}
 		.projecth1{
-			font-size: 4rem;
+			font-size: 4rem; margin-bottom: 2.5vw;
 			}
 		.project1para,
 		.project2para{
-			font-size: 1.8rem; filter: hue-rotate(var(--hue-value, 0deg));
+			font-size: 1.8rem; filter: hue-rotate(var(--hue-value, 0deg)); margin-top: 2vw;
 			}
 		.heartlogo2{
 			width:24px;
@@ -61,6 +62,9 @@
 			}
 			.menudiv{
 				width: 40vw;
+			}
+			.footer{
+				margin-left: 15vw; margin-right: 15vw;
 			}
 		}
 
@@ -111,10 +115,12 @@
 			}
 			.sun-button,
 			.moon-button{
-				width: 8vw; top: 1vh; right: 1vw;
+				width: 8vw; top: 0; right: 0;
 			}
 			.navbar{
 				grid-template-columns: auto auto auto;
+				justify-items: center;
+				align-items: center;
 			}
 			.menudiv{
 				width: 100vw;
@@ -159,7 +165,10 @@
 			text-align: center; display: grid; grid-template-rows: auto auto; grid-template-columns: auto;
 		}
 		.footer{
-			text-align: center; color: white;
+			text-align: center; color: white; margin-bottom: 40px; padding: 40px 0;
+			box-shadow:
+					0px -2px 0px rgba(255,255,255,0.2);
+/* 					0px 1px 0px rgba(255,255,255,0.2); */
 
 			/*change for toogle -->*/
 			filter: hue-rotate(var(--hue-value, 0deg));
@@ -178,7 +187,10 @@
 		}
 		.project1para,
 		.project2para{
-			color: #b4b4b4; font-family: Arial, sans-sanrif; margin-top: 0; text-align: start; margin-bottom: 50px;
+			color: #b4b4b4; font-family: Arial, sans-sanrif; margin-top: 2vw; text-align: start; margin-bottom: 10vw;
+		}
+		.project2para{
+			margin-bottom: 6vw;
 		}
 		.project1about,
 		.project2about{
@@ -193,12 +205,12 @@
 			text-align: center;
 		}
 		.menudiv{
-			display: none; position: sticky; height: 100vh; background-color: rgba(120,60,0,0.70);
+			display: none; position: sticky; height: 100vh; background-color: rgba(120,60,0,1);
 			backdrop-filter: blur(10px); right: 0; padding: 30px; text-decoration: none; list-style-type: none;
-			color: white; opacity: 0.9; z-index: 2; bottom: 0;
+			color: white; opacity: 1; z-index: 2; bottom: 0;
 		}
 		.menudiv li{
-			padding: 40px 0; font-size: 60px; color:hsl(180, 100%, 70%); list-style-type: none;
+			padding: 40px 0; font-size: 4vh; color: hsl(180, 80%, 60%); list-style-type: none;
 		}
 		.navlink{
 			color: white;
