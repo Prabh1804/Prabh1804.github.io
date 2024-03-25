@@ -149,7 +149,39 @@
 		}
 		.li{
 			text-align: center; font-family: monospace; font-size: 1.8rem; cursor: pointer; border: 2px solid white;
-			border-radius: 12px; padding: 5px;
+			border-radius: 12px; padding: 5px; transition: transform 0.3s; overflow: hidden; z-index: 3;
+		}
+
+		.li:hover{
+			transform: scale(1.1);
+		}
+		.li:hover::before{
+			content:'';
+			left:-20%;
+			top: 10%;
+			position: absolute;
+			width: 140%;
+			height:70%;
+			background: linear-gradient(#00ccff,#d500f9);
+			animation: rotate 3s linear infinite;
+			border-radius: 12px;
+			z-index: -999;
+		}
+		.li:hover::after{
+			content:'';
+			position: absolute;
+			Background: #171717;
+			inset: 3px;
+			border-radius: 12px;
+			z-index: -10;
+		}
+		@keyframes rotate{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
 		}
 		.projecth1{
 			display:grid; grid-template-rows: auto;grid-template-columns: auto auto; justify-content: center;
@@ -161,9 +193,6 @@
 		}
 		.navbar{
 			display: grid; grid-template-rows: auto; background: #333; position: sticky; top: 0; z-index: 1;
-		}
-		.strong{
-			color: #f47723; text-shadow: -2px -2px 0px #555555; font-weight: bold;
 		}
 		.introduction{
 			grid-template-rows: auto auto; grid-template-columns: auto; height: min-content;
@@ -179,7 +208,6 @@
 			text-align: center; color: white; margin-bottom: 40px; padding: 40px 0;
 			box-shadow:
 					0px -2px 0px rgba(255,255,255,0.2);
-/* 					0px 1px 0px rgba(255,255,255,0.2); */
 
 			/*change for toogle -->*/
 			filter: hue-rotate(var(--hue-value, 0deg));
@@ -233,10 +261,18 @@
 		}
 		.navbar .sun-button{
 			position: relative; background-color: hsl(136, 0%, 20%); border-radius: 50%; display: none;
-			filter: invert(0%);
+			filter: invert(0%); transition: transform 0.5s;
 		}
 		.moon-button{
 			position: relative; background-color: hsl(136, 0%, 20%); border-radius: 50%; display: inline;
+			transition: transform 0.5s;
+		}
+		.moon-button:hover,
+		.sun-button:hover{
+			transform: scale(1.1);
+		}
+		.strong{
+			color: #f47723; text-shadow: -2px -2px 0px #555555; font-weight: bold;
 		}
 
 
