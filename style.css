@@ -101,7 +101,8 @@
 		.project2para{
 				font-size: 6vw;
 			}
-		.footer{
+		.footer,
+		.resumeSpan{
 				font-size: 3vw;
 			}
 		.heartlogo2{
@@ -273,6 +274,10 @@
 		}
 		.strong{
 			color: #f47723; text-shadow: -2px -2px 0px #555555; font-weight: bold;
+		}
+		.resumeSpan{
+			text-align: center;
+			color: white;
 		}
 
 

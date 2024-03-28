@@ -15,6 +15,9 @@ menu = () => {
 	document.querySelector(".menudiv").style.display = "grid";
 }
 
+window.onscroll = () =>{
+	menuRemove();
+}
 menuRemove = () => {
 	document.querySelector(".menudiv").style.display = "none";
 }
